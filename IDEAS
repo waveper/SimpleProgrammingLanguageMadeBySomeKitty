@@ -1,0 +1,68 @@
+This language will be based on C, but I will implement my idea 
+
+-- Keywords? We got introduction characters:
+f is natively (f)unction, but would use fn because tokenizer would be confused because it has no secondary charactor: f + (n = (f)u(n)ction, c = (f)unction (c)alling)
+i is (i)nteger: i + (n = (i)nteger (n)umber, u = (i)nteger (u)nsigned, v = (i)nteger (v)oid)
+r has no native meaning: r + (t = (r)e(t)urn, b = (r)ead (b)yte, w = (r)ead (w)ord, d = (r)ead (d)ouble)
+w has no native meaning: w + (b = (w)rite (b)yte, w = (w)rite (w)ord, d = (w)rite (d)ouble)
+
+-- Feature
+
+-- I/O: since it's based on C, so, it would have to call external function via fc
+-- Creating and Modifying data: variable declaration, r(b/w/d) w(b/w/d), and calculation
+-- If/If-else and for-loop/while-loop: none
+
+-- Function
+well, standard programming ideas.
+
+fn main in32:arg1 in32:arg2 > in32 (
+rt 0;
+)
+
+-- Comment
+
+/* C89 style comment */
+
+-- Function Calling
+
+fc function arg1 arg2 > return_var;
+
+-- Variable declaring
+
+/*global*/
+in32 var = 0;
+
+/*in function*/
+fn main > iv (
+in32 var1 = 0;
+/* also, an array*/
+in8 var2 : 13;
+)
+
+-- Dereference
+? is a compiler-side dereference symbol
+It would output variable stack location as iu32
+So, it only works on local variable
+
+-- Read/Write Memory
+there will be rb and wb
+
+rb [memory location] [output value]
+wb [memory location] [input value]
+
+rb ?var var2; /* read value from var to var2 in 1 byte */
+wb ?var var2; /* write value from var2 to var in 1 byte */
+
+-- Inc/Decrement
+same idea from C
+
+var++;
+var--;
+
+-- Calculation
+Calculation starts under single equal sign
+
+var = /*calculation happend here*/;
+
+example
+var = (12 * 2) + 2;

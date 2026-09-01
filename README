@@ -1,0 +1,16 @@
+--- SPLMBSK
+aka SP(A)L(MBS)K
+       +   ---
+file extension .spalk
+
+Some [Simple] compiler for custom [Programming Language]
+[Made By] WavePer the [Some Kitty]
+
+-- How it works?
+Yeah, yeah, the question that is [Made By] someone (myself)
+
+Basically
+file.spalk -> [compiler: tokenizer->parser->assembly generator] -> file.asm
+That's it...
+
+also, it's archetecture dependent (intel 80386 range)
